@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-
+const port = process.env.PORT;
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 var Items = [];
@@ -40,6 +40,6 @@ app.post('/', (req, res) => {
 
 })
 
-app.listen(3009, () => {
+app.listen(port, () => {
     console.log('listening on port 3009');
 })
