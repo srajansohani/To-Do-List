@@ -9,6 +9,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "16.16.0"
+  },
   "dependencies": {
     "body": "^5.1.0",
     "ejs": "^3.1.8",
