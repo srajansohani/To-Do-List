@@ -10,21 +10,25 @@
 </head>
 
 <body>
+    
     <div class = "box" id ="heading">
             <h1><%= day %></h1>
     </div>
     <div class = "box" id ="">
      
         <% for(var i=0; i < newItems.length; i++){ %>
+           <form action = "/delete" method = "post">
            <div class = "item" id ="">
-            <input type="checkbox">
-                <p><%= newItems[i] %></p>
+            <input type="checkbox" name = "checkbox" value = "<%=newItems[i]._id %>" onchange="this.form.submit()">
+                <p><%= newItems[i].name %></p>
+           </form>
+           <input type = "hidden" name = "listName" value = <%= listTitle %>> </input>
            </div>
             <% } %>     
             
-            <form class="item" method="post" action="/">
+            <form class="item" method="post" action= "/">
                 <input type="text" name="newTask" placeholder="New ITEM" autocomplete="off">
-                <button type="submit" name="button" value = <%= listTitle %>>+</button>
+                <button type="submit" name="list" value = <%= listTitle %>>+</button>
             </form>
   
     </div>

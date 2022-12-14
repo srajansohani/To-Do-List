@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 app.use(express.static("public"));
-const port = process.env.PORT || 3009; //port is enviorment varible as it would be updated by host - heroku 
+const port = process.env.PORT; //port is enviorment varible as it would be updated by host - heroku 
 
 
 //setupping bodyParser
