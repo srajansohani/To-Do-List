@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static("public"));
 let port = process.env.PORT;       //port is enviorment varible as it would be updated by host - heroku 
 if (port == null || port == "") {
-    port = 8000;
+    port = 3009;
 }
 
 
