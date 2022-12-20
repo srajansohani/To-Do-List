@@ -2,11 +2,7 @@
 const express = require('express');
 const app = express();
 app.use(express.static("public"));
-let port = process.env.PORT;       //port is enviorment varible as it would be updated by host - heroku 
-if (port == null || port == "") {
-    port = 3009;
-}
-
+var port = process.env.PORT;       //port is enviorment varible as it would be updated by host - heroku 
 
 //setupping bodyParser
 const bodyParser = require('body-parser');
